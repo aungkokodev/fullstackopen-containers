@@ -16,4 +16,7 @@ services:
     image: redis:8
     ports:
       - 6379:6379
+    command: ['redis-server', '--appendonly', 'yes']
+    volumes:
+      - ./redis_data:/data
     restart: unless-stopped
