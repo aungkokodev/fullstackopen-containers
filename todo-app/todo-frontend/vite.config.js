@@ -7,4 +7,7 @@ export default defineConfig({
   test: {
     environment: 'jsdom',
   },
+  server: {
+    allowedHosts: ['localhost', 'todo-frontend'],
+  },
 })
