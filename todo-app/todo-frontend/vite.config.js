@@ -8,6 +8,6 @@ export default defineConfig({
     environment: 'jsdom',
   },
   server: {
-    allowedHosts: ['localhost', 'todo-frontend'],
+    allowedHosts: ['localhost', 'todo-frontend-dev'],
   },
 })

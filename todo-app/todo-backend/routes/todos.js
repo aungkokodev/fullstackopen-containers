@@ -31,13 +31,12 @@ const findByIdMiddleware = async (req, res, next) => {
   const { id } = req.params
   req.todo = await Todo.findById(id)
   if (!req.todo) return res.sendStatus(404)
-
   next()
 }
 
 /* DELETE todo. */
 singleRouter.delete('/', async (req, res) => {
-  await req.todo.delete()
+  await req.todo.deleteOne()
   res.sendStatus(200)
 })
 
