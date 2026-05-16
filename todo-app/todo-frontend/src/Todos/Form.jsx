@@ -7,9 +7,11 @@ const TodoForm = ({ createTodo }) => {
     setText(target.value)
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    createTodo({ text })
+    if (!text) return
+    await createTodo({ text })
+    setText('')
   }
 
   return (
